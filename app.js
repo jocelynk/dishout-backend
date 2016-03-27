@@ -7,7 +7,8 @@ var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
-
+var vendors = require('./routes/vendors');
+//var drop_locations = require('./routes/drop_locations');
 var app = express();
 
 // view engine setup
@@ -24,6 +25,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 app.use('/users', users);
+
+// JSON API
+app.get('/api/vendors', vendors.vendors);
+//app.get('/api/drop_off_locations', drop_locations.championStats);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
