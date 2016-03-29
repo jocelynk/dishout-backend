@@ -6,7 +6,7 @@ CREATE TABLE dbo.levels
   level_id serial NOT NULL,
   level_no int,
   level_name varchar(255) DEFAULT NULL,
-  level_points int,
+  points_to_next_level int,
   prize varchar(255) DEFAULT NULL,
    
   CONSTRAINT levels_pkey PRIMARY KEY (level_id)
