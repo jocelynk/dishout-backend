@@ -3,7 +3,7 @@ begin transaction;
 INSERT INTO dbo.levels(
 level_no,
 level_name,
-level_points,
+points_to_next_level,
 prize)
 VALUES
 (1, 'Seedling', 200, NULL),
