@@ -6,7 +6,7 @@ CREATE TABLE dbo.dishes
 (
   dish_id SERIAL NOT NULL,
   dish_number int,
-  uses int,
+  uses int DEFAULT 0,
   dish_added date DEFAULT CURRENT_DATE,
   dish_type character varying(255) DEFAULT NULL::character varying,
   CONSTRAINT bowls_pkey PRIMARY KEY (dish_id)
