@@ -11,7 +11,7 @@ CREATE TABLE dbo.users
   -- phone_number varchar(255) NOT NULL,
   level_id int NOT NULL DEFAULT 1 REFERENCES dbo.levels(level_id),
   userpoints int NOT NULL DEFAULT 0,
-  
+  cur_transaction int DEFAULT NULL,
   CONSTRAINT users_pkey PRIMARY KEY (user_id)
 )
 WITH (
