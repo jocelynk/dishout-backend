@@ -5,7 +5,7 @@
 CREATE TABLE dbo.drop_off_locations
 (
   drop_off_location_id serial NOT NULL,
-  address character varying(255) DEFAULT NULL::character varying,
+  location_name character varying(255) DEFAULT NULL::character varying,
   location_type character varying(255) DEFAULT NULL::character varying,
   address_id int NOT NULL references dbo.addresses(address_id),
   CONSTRAINT drop_off_locations_pkey PRIMARY KEY (drop_off_location_id)

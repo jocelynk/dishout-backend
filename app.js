@@ -9,7 +9,7 @@ var routes = require('./routes/index');
 var users = require('./routes/users');
 var vendors = require('./routes/vendors');
 var dishes = require('./routes/dishes');
-//var drop_locations = require('./routes/drop_locations');
+var drop_locations = require('./routes/drop_locations');
 var app = express();
 
 //Enabling CORS
@@ -56,7 +56,8 @@ app.post('/api/user', users.insertUser);
 app.get('/api/user', users.user);
 /**VENDORS**/
 app.get('/api/vendors', vendors.vendors);
-//app.get('/api/drop_off_locations', drop_locations.championStats);
+/**DROP OFF**/
+app.get('/api/drop_off_locations', drop_locations.drop_locations);
 
 /**DISHES**/
 app.post('/api/checkindish', dishes.checkinDish);
