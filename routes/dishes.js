@@ -46,6 +46,11 @@ exports.checkoutDish = function(req, res){
 		.where('user_id','=', query.user_id)
 		.then(function(row){
 			transaction_id = row[0].cur_transaction;
+			database('dbo.users')
+			.where('user_id', '=', query.user_id)
+			.increment('userpoints', 10)
+			.then(function(row){	
+			});
 		});
 	database('dbo.users')
 		.where('user_id', '=', query.user_id)
